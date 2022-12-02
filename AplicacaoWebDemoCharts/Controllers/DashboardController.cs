@@ -1,4 +1,5 @@
 ﻿using AplicacaoWebDemoCharts.Models.Index;
+using AplicacaoWebDemoCharts.Models.Proin;
 using Microsoft.AspNetCore.Mvc;
 
 namespace AplicacaoWebDemoCharts.Controllers
@@ -21,5 +22,26 @@ namespace AplicacaoWebDemoCharts.Controllers
             var resultado = navegador.ObterNavegadoresParaMontarGraficoBarra();
             return Json(resultado);
         }
+
+
+        public IActionResult Proin()
+        {
+            Proin proin = new Proin();
+            var resultado = proin.ObterTodos();
+            return View(resultado);
+        }
+        public JsonResult ObterTodosParaProin()
+        {
+            Proin proin = new Proin();
+            var resultado = proin.ObterTodos();
+            return Json(resultado);
+        }
+
+        //public JsonResult ObterTodosProinParaGraficoDeBarra()
+        //{
+        //    Proin proin = new Proin();
+        //    var resultado = proin.ObterTodos();
+        //    return Json(resultado);
+        //}
     }
 }
