@@ -1,0 +1,83 @@
+﻿
+
+<h2 class="text-center">Mapa De Integridade</h2>
+
+<h4 class="text-center text-info">Painel de Monitoramento de Adesão ao Programa Integridade Rondoniense</h4>
+<br />
+
+<h5 class="text-center">A Construção dos Planos de Integridade está Estruturada em 4 passos conforme Manual Técnico PROIN</h5>
+<div class="card-group">
+    <div class="card text-white bg-primary" style="background-color: #0e447e!important">
+        <div class="card-body">
+            <h2 class="card-title text-center">1º PASSO</h2>
+            <div class="card-footer">
+                <h4 class="text-center">Adesão e Designação</h4>
+            </div>
+            <p class="card-text text-center">1. Adesão ao PROIN</p>
+            <p class="card-text text-center">2. Designação de equipe</p>
+        </div>
+    </div>
+    <div class="card text-white bg-success" style="background-color: #02701b!important">
+        <div class="card-body">
+            <h2 class="card-title text-center">2º PASSO</h2>
+            <div class="card-footer">
+                <h4 class="text-center">Elaboração e Validação</h4>
+            </div>
+            <p class="card-text text-center">1. Planejamento das ações estratégicas</p>
+            <p class="card-text text-center">2. Levantamento do cenário atual</p>
+            <p class="card-text text-center">3. Registro das Medidas de Integridade em Vigor</p>
+            <p class="card-text text-center">4. Levantamento dos Riscos e medidas de controle</p>
+            <p class="card-text text-center">5. Validação do Plano de Integridade</p>
+        </div>
+    </div>
+    <div class="card text-white bg-warning" style="background-color: #d5a107!important">
+        <div class="card-body">
+            <h2 class="card-title text-center">3º PASSO</h2>
+            <div class="card-footer">
+                <h4 class="text-center">Gestão dos Riscos</h4>
+            </div>
+            <p class="card-text text-center">1. Identificação e priorização dos riscos</p>
+            <p class="card-text text-center">2. Proposta de tratamento de riscos</p>
+        </div>
+    </div>
+    <div class="card text-white bg-danger" style="background-color: #9d1320!important">
+        <div class="card-body">
+            <h2 class="card-title text-center">4º PASSO</h2>
+            <div class="card-footer">
+                <h4 class="text-center">Monitoramento</h4>
+            </div>
+            <p class="card-text text-center">1. Controle de Implementação PROIN</p>
+            <p class="card-text text-center">2. Execução de Ações Gerenciais</p>
+            <p class="card-text text-center">3. Redução de probabilidade de Riscos e Impactos</p>
+        </div>
+    </div>
+</div>
+
+<br /><Br /><Br />
+
+<div id="grafico-proin-barra"></div>
+
+<br /><br /><br />
+
+<partial name="_TabelaProin" />
+
+
+<br />
+<br />
+
+<div id="grafico-proin"></div>
+
+@section Scripts{
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+    <script src="https://code.highcharts.com/highcharts.js"></script>
+    <script src="https://code.highcharts.com/modules/exporting.js"></script>
+    <script src="https://code.highcharts.com/modules/export-data.js"></script>
+    <script src="https://code.highcharts.com/modules/accessibility.js"></script>
+
+    <script src="~/js/graficoproin.js"></script>
+    <script src="~/js/graficoproinbarra.js"></script>
+
+    <script>
+        var urlBase = 'https://' + '@Context.Request.Host' + '@Context.Request.Path'
+    </script>
+}

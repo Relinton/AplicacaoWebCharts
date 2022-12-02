@@ -1,0 +1,29 @@
+﻿@model IEnumerable<AplicacaoWebDemoCharts.Models.Proin.Proin>
+
+<h4 class="text-center text-info">Monitoramento das fases de construção dos Planos de Integridade por Unidade Gestora</h4>
+<table class="table table-bordered table-condensed table-hover table-striped">
+    <thead class="thead-dark">
+        <tr>
+            <th>Secretaria</th>
+            <th>Adesão a Designação</th>
+            <th>Elaboração de Validação</th>
+            <th>Gestão de Riscos</th>
+            <th>Monitoramento</th>
+            <th>Porcentagem</th>
+            <th>Data de Adesão</th>
+        </tr>
+    </thead>
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>@item.name</td>
+            <td>@item.adesaoDesignacao</td>
+            <td>@item.elaboracaoValidacao</td>
+            <td>@item.gestaoRiscos</td>
+            <td>@item.monitoramento</td>
+            <td>@item.y</td>
+            <td>@item.dataAdesao.Date.ToString("dd/MM/yyyy")</td>
+        </tr>
+    }
+    <tbody></tbody>
+</table>
